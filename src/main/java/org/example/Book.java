@@ -1,12 +1,24 @@
 package org.example;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.List;
+
+
 public class Book {
     public int id;
     public String name;
     public String author;
     public boolean loaned;
 
-    public Book(int id, String name, String author, boolean loaned) {
+    public Book() {
+    }
+
+    public Book(int id, String name, String author, boolean loaned)  {
         this.id = id;
         this.name = name;
         this.author = author;
@@ -43,5 +55,16 @@ public class Book {
 
     public void setLoaned(boolean loaned) {
         this.loaned = loaned;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", author='" + author + '\'' +
+                ", loaned=" + loaned +
+                '}';
     }
 }
