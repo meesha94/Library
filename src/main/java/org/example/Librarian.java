@@ -1,12 +1,13 @@
 package org.example;
 
-public class User extends People{
+public class Librarian extends People {
     public int id;
     public String name;
     public boolean admin;
 
-    public User(int id, String name, boolean admin) {
-        super(id, name, admin);
+    public Librarian(int id, String name, boolean admin) {
+        super(id, name,admin);
+
     }
 
     public int getId() {
