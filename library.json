@@ -1,14 +1,17 @@
 [
   {
     "author": "Stephanie Meyer",
-    "name": "Twilight"
+    "name": "Twilight",
+    "id": "1"
   },
   {
     "author": "Meg Cabot",
-    "name": "Princess Diaries"
+    "name": "Princess Diaries",
+    "id": "2"
   },
   {
     "author": "Richelle Mead",
-    "name": "Vampire Academy"
+    "name": "Vampire Academy",
+    "id": "3"
   }
 ]

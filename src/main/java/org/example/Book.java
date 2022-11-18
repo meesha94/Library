@@ -60,11 +60,11 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", author='" + author + '\'' +
-                ", loaned=" + loaned +
-                '}';
+        return
+                "ID: " + id +
+                "  Title: '" + name + '\'' +
+                "   Author: " + author  +
+                "   Loaned: " + loaned + "\n"
+                ;
     }
 }

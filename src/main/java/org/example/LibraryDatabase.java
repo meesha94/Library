@@ -1,14 +1,16 @@
 package org.example;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import org.json.CDL;
-import java.io.BufferedReader;
+
+import java.io.*;
+import java.lang.reflect.Type;
 import java.util.HashSet;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
@@ -29,6 +31,20 @@ public class LibraryDatabase {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void JsonToJava() {
+        List<Book> books;
+
+        Type listType = new TypeToken<List<Book>>() {
+        }.getType();
+        try {
+            books = new Gson().fromJson(new FileReader("/Users/meeshaanwar/Desktop/puffin/library/library.json"), listType);
+            System.out.println(books.toString().replace(",", ""));
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
 
